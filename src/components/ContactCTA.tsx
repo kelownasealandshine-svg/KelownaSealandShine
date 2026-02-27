@@ -28,12 +28,12 @@ const ContactCTA = () => {
             <div className="flex flex-col items-center gap-2">
               <Phone className="w-6 h-6 text-primary" />
               <span className="font-heading font-bold text-foreground">Call Us</span>
-              <span className="text-muted-foreground text-sm font-body">(250) 555-0199</span>
+              <a href="tel:2503177053" className="text-muted-foreground text-sm font-body hover:text-primary transition-colors">(250) 317-7053</a>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Mail className="w-6 h-6 text-primary" />
-              <span className="font-heading font-bold text-foreground">Email</span>
-              <span className="text-muted-foreground text-sm font-body">info@kelownasealandshine.ca</span>
+              <span className="font-heading font-bold text-foreground">Owner</span>
+              <span className="text-muted-foreground text-sm font-body">Derek Bueckert</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <MapPin className="w-6 h-6 text-primary" />

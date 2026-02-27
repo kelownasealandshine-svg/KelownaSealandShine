@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/business-card-logo.jpg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const links = ["Services", "Why Us", "Contact"];
+  const links = ["Services", "Gallery", "Why Us", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/90 backdrop-blur-md border-b border-secondary/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-secondary/50">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="font-heading text-xl font-extrabold text-secondary-foreground tracking-tight">
-          Kelowna <span className="text-primary">Seal & Shine</span>
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Kelowna Seal & Shine" className="h-10 rounded" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -19,13 +20,13 @@ const Navbar = () => {
             <a
               key={link}
               href={`#${link.toLowerCase().replace(" ", "-")}`}
-              className="text-sm font-medium text-secondary-foreground/70 hover:text-primary transition-colors"
+              className="text-sm font-medium text-secondary-foreground/70 hover:text-secondary-foreground transition-colors"
             >
               {link}
             </a>
           ))}
           <Button size="sm" className="gap-2 font-semibold">
-            <Phone className="w-4 h-4" /> Get a Quote
+            <Phone className="w-4 h-4" /> (250) 317-7053
           </Button>
         </div>
 
@@ -43,14 +44,14 @@ const Navbar = () => {
             <a
               key={link}
               href={`#${link.toLowerCase().replace(" ", "-")}`}
-              className="block text-sm font-medium text-secondary-foreground/70 hover:text-primary"
+              className="block text-sm font-medium text-secondary-foreground/70 hover:text-secondary-foreground"
               onClick={() => setOpen(false)}
             >
               {link}
             </a>
           ))}
           <Button size="sm" className="w-full gap-2 font-semibold mt-2">
-            <Phone className="w-4 h-4" /> Get a Quote
+            <Phone className="w-4 h-4" /> (250) 317-7053
           </Button>
         </div>
       )}
