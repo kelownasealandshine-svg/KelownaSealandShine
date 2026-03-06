@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Droplets, Paintbrush, Warehouse } from "lucide-react";
+import { Shield, Droplets } from "lucide-react";
 
 const services = [
   {
@@ -11,16 +11,6 @@ const services = [
     icon: Droplets,
     title: "Power Washing",
     description: "Restore your concrete to like-new condition. We remove dirt, oil stains, mold, and years of buildup before sealing.",
-  },
-  {
-    icon: Paintbrush,
-    title: "Decorative Coatings",
-    description: "Transform dull concrete with decorative stains, epoxy coatings, and stamped overlays for a stunning finish.",
-  },
-  {
-    icon: Warehouse,
-    title: "Garage Floors",
-    description: "Durable epoxy and polyaspartic coatings for garage floors that resist chemicals, abrasion, and hot tire pickup.",
   },
 ];
 
@@ -44,7 +34,7 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {services.map((service, i) => (
             <motion.div
               key={service.title}

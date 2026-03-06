@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-secondary/50">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-3">
-          <img src={logo} alt="Kelowna Seal & Shine" className="h-12 rounded brightness-0 invert" />
+          <img src={logo} alt="Kelowna Seal & Shine" className="h-20 rounded brightness-0 invert" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
