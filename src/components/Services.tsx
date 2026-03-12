@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Droplets } from "lucide-react";
+import { Shield, Droplets, Home } from "lucide-react";
 
 const services = [
   {
@@ -9,8 +9,13 @@ const services = [
   },
   {
     icon: Droplets,
-    title: "Power Washing",
-    description: "Restore your concrete to like-new condition. We remove dirt, oil stains, mold, and years of buildup before sealing.",
+    title: "Driveway Pressure Washing",
+    description: "Restore your driveway to like-new condition. Our professional pressure washing removes built-up dirt, moss, oil stains, and grime that Kelowna's hot summers and freezing winters leave behind. Regular seasonal washing improves curb appeal and prevents long-term surface damage — keeping your concrete looking great year-round.",
+  },
+  {
+    icon: Home,
+    title: "Soft Washing",
+    description: "A gentle, low-pressure cleaning method perfect for your home's exterior. Soft washing safely removes algae, mildew, dirt, and stains from siding, stucco, and delicate surfaces without the risk of damage — leaving your house looking fresh and well-maintained.",
   },
 ];
 
@@ -34,7 +39,7 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
