@@ -1,21 +1,26 @@
 import { motion } from "framer-motion";
 import { Shield, Droplets, Home } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Shield,
-    title: "Concrete Sealing",
-    description: "Protect your driveways, patios, and walkways from moisture, freeze-thaw damage, and UV wear with our premium sealers.",
-  },
-  {
     icon: Droplets,
     title: "Driveway Pressure Washing",
-    description: "Restore your driveway to like-new condition. Our professional pressure washing removes built-up dirt, moss, oil stains, and grime that Kelowna's hot summers and freezing winters leave behind. Regular seasonal washing improves curb appeal and prevents long-term surface damage — keeping your concrete looking great year-round.",
+    description: "Remove built-up dirt, moss, oil stains, and grime from your driveway. Professional pressure washing restores curb appeal and prevents long-term surface damage caused by Kelowna's hot summers and freezing winters.",
+    link: "/driveway-pressure-washing",
+  },
+  {
+    icon: Shield,
+    title: "Concrete Sealing",
+    description: "Protect your driveways, patios, and walkways from moisture, freeze-thaw damage, road salt, stains, and UV wear with our premium acrylic sealers for long-lasting protection.",
+    link: "/concrete-sealing",
   },
   {
     icon: Home,
-    title: "Soft Washing",
-    description: "A gentle, low-pressure cleaning method perfect for your home's exterior. Soft washing safely removes algae, mildew, dirt, and stains from siding, stucco, and delicate surfaces without the risk of damage — leaving your house looking fresh and well-maintained.",
+    title: "House Soft Washing",
+    description: "A gentle, low-pressure cleaning method that safely removes dirt, algae, mildew, and organic buildup from vinyl siding, stucco, painted surfaces, and other delicate exterior materials.",
+    link: "/soft-washing",
   },
 ];
 
@@ -48,7 +53,7 @@ const Services = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeUp}
-              className="group p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+              className="group p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 flex flex-col"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-7 h-7 text-primary" />
@@ -56,9 +61,12 @@ const Services = () => {
               <h3 className="text-xl font-heading font-bold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground font-body text-sm leading-relaxed">
+              <p className="text-muted-foreground font-body text-sm leading-relaxed mb-6 flex-1">
                 {service.description}
               </p>
+              <Button variant="link" className="p-0 h-auto justify-start text-primary font-semibold" asChild>
+                <Link to={service.link}>Learn More →</Link>
+              </Button>
             </motion.div>
           ))}
         </div>
