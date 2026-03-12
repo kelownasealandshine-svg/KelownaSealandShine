@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Award, Clock, MapPin } from "lucide-react";
 
 const reasons = [
-  { icon: Award, title: "10+ Years Experience", description: "Seasoned professionals with thousands of projects completed." },
-  { icon: CheckCircle, title: "Premium Products", description: "We use only top-tier sealers and coatings for lasting results." },
+  { icon: Award, title: "Friendly & Personal Service", description: "We treat every customer with kindness and respect — you're not just a job number, you're a neighbor." },
+  { icon: CheckCircle, title: "Attention to Detail", description: "We take the extra time to get every edge, corner, and surface done right — no shortcuts." },
   { icon: Clock, title: "Fast Turnaround", description: "Most residential projects completed in just 1-2 days." },
   { icon: MapPin, title: "Locally Owned", description: "Proudly serving Kelowna and the entire Okanagan region." },
 ];
