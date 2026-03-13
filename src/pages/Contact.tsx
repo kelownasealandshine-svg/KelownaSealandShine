@@ -26,15 +26,32 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // For now, simulate submission. Once Lovable Cloud is enabled, this will send an actual email.
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const formData = new FormData(e.currentTarget);
+      formData.append("form-name", "quote-request");
 
-    setSubmitted(true);
-    setLoading(false);
-    toast({
-      title: "Quote request sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
+
+      setSubmitted(true);
+      toast({
+        title: "Quote request sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us at 250-317-7053.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,7 +82,11 @@ const Contact = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field" className="space-y-5">
+                  <input type="hidden" name="form-name" value="quote-request" />
+                  <p className="hidden">
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                  </p>
                   <h2 className="text-2xl font-heading font-bold text-foreground mb-2">Request a Quote</h2>
 
                   <div className="grid sm:grid-cols-2 gap-4">

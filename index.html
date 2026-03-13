@@ -7,6 +7,11 @@
     <meta name="description" content="Professional pressure washing, concrete sealing & soft washing in Kelowna BC. Driveways, patios, house exteriors. Call or text 250-317-7053 for a free quote." />
     <meta name="author" content="Kelowna Seal and Shine" />
     <meta name="keywords" content="pressure washing Kelowna, driveway cleaning Kelowna, concrete sealing Kelowna, house washing Kelowna, soft washing Kelowna" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://sealnshine.ca" />
 
     <meta property="og:title" content="Kelowna Seal & Shine | Pressure Washing & Concrete Sealing" />
@@ -41,6 +46,16 @@
   </head>
 
   <body>
+    <!-- Hidden form for Netlify Forms detection (React SPA requires this) -->
+    <form name="quote-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="address" />
+      <select name="service"></select>
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
