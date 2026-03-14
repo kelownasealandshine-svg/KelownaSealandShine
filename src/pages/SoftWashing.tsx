@@ -23,6 +23,7 @@ const SoftWashing = () => {
       <PageHero
         title="House Soft Washing"
         subtitle="Gentle, effective exterior cleaning that keeps your home looking fresh without risking damage."
+        backgroundImage={softWashingBg}
       />
 
       <section className="py-20">
