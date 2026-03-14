@@ -5,6 +5,7 @@ import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import softWashingBg from "@/assets/soft-washing-bg.jpg";
 
 const benefits = [
   "Safe for vinyl siding, stucco, and painted surfaces",
