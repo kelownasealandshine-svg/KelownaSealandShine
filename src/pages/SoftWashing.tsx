@@ -5,6 +5,7 @@ import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import softWashingBg from "@/assets/soft-washing-bg.jpg";
 
 const benefits = [
   "Safe for vinyl siding, stucco, and painted surfaces",
@@ -22,6 +23,7 @@ const SoftWashing = () => {
       <PageHero
         title="House Soft Washing"
         subtitle="Gentle, effective exterior cleaning that keeps your home looking fresh without risking damage."
+        backgroundImage={softWashingBg}
       />
 
       <section className="py-20">
