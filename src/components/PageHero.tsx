@@ -41,7 +41,7 @@ const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
             <Button size="lg" className="gap-2 font-semibold" asChild>
               <Link to="/contact">Get a Free Quote</Link>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 font-semibold border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button size="lg" variant="outline" className="gap-2 font-semibold border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10" asChild>
               <a href="tel:2503177053">
                 <Phone className="w-5 h-5" /> Call or Text 250-317-7053
               </a>
