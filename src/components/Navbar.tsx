@@ -73,7 +73,7 @@ const Navbar = () => {
                 <Phone className="w-4 h-4" /> Call or Text 250-317-7053
               </a>
             </Button>
-            <Button size="sm" variant="outline" className="w-full gap-2 font-semibold border-secondary-foreground/30 text-secondary-foreground" asChild>
+            <Button size="sm" variant="outline" className="w-full gap-2 font-semibold border-secondary-foreground/30 text-secondary-foreground bg-transparent hover:bg-secondary-foreground/10" asChild>
               <a href="mailto:kelownasealandshine@gmail.com">
                 <Mail className="w-4 h-4" /> Email Us
               </a>

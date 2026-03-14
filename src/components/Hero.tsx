@@ -39,7 +39,7 @@ const Hero = () => {
                 Get a Free Quote <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg gap-2 px-8 py-6 font-semibold border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button size="lg" variant="outline" className="text-lg gap-2 px-8 py-6 font-semibold border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent" asChild>
               <a href="tel:2503177053">
                 <Phone className="w-5 h-5" /> Call or Text 250-317-7053
               </a>

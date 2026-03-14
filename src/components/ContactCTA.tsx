@@ -27,7 +27,7 @@ const ContactCTA = () => {
                 Request a Free Quote <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg gap-2 px-10 py-6 font-semibold" asChild>
+            <Button size="lg" variant="outline" className="text-lg gap-2 px-10 py-6 font-semibold text-foreground" asChild>
               <a href="tel:2503177053">
                 <Phone className="w-5 h-5" /> Call or Text 250-317-7053
               </a>
