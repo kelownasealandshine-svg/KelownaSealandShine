@@ -12,7 +12,7 @@ const About = () => {
       <Navbar />
       <PageHero
         title="About Us"
-        subtitle="Local, owner-operated, and committed to doing great work for our Kelowna neighbors."
+        subtitle="Local, family owned and operated, and committed to doing great work for our Kelowna neighbors."
       />
 
       <section className="py-20">
